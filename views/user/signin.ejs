@@ -1,0 +1,37 @@
+
+<main>
+    <div class="sign-todoDiv"><h1>ToDo App</h1></div>
+    <div class="sign-div">
+        <h2 class=sign-header>SIGN IN</h2>
+        <%if (hasErrors) {%>
+        
+            <%message.forEach(messages=>{%>
+            <div class="sign-message-div"> <%=messages%></div>
+    <%})}%>  
+    
+        <div class="sign-input-div">
+            <form action="/signin" method="POST">
+
+                <div class="sign-input-small-div">
+                    <div class="email-div">
+                         <label>Email</label>
+                    </div>
+                    <input name="email" type="email" class="sign-input"autocomplete="off"/>
+                </div>
+
+                <div class="sign-input-small-div">
+                    <div class="password-div">
+                         <label>Password</label>
+                    </div>
+                    <input name="password" type="password" class="sign-input" autocomplete="off"/>
+                    <input type="hidden" name="_csrf" value="<%=csrfToken%>"/>
+                </div>
+                <button type="submit" class="sign-button">SIGN IN</button>
+            </form>
+
+            Don't have an account?<a href="/signup" class="sign-switch">Sign Up</a>
+        </div>
+
+        
+    </div>
+</main>

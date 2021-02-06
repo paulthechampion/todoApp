@@ -1,0 +1,35 @@
+<div class="todo-div">
+    <div class="h1-div">
+        <h1>Your Todo List <a href="/logout" class="logout-btn">Logout</a></h1>
+    </div>
+    <%if (hasErrors) {%>
+        
+        <%message.forEach(messages=>{%>
+        <div class="task-complete"> <%=messages%></div>
+    <%})}%>  
+    <table class="todo-table">
+        <tr>
+            <th>Date Due</th>
+            <th>Subject</th>
+            <th>Objectives</th>
+        </tr>
+        
+        <%todos.forEach(todo=>{%>
+        <tr>
+            <td><%=todo.dateDue.toDateString()%></td>
+            <td><%=todo.subject%></td>
+            <td><div class="obj-div"><%=todo.objective%></td></div>
+            <td class="delete-td">
+                <form method="POST" action="/todo/<%=todo.id%>?_method=DELETE">
+                <button  class="btn btn-danger"type="submit">Delete</button>
+                </form>
+        </td>
+        </tr>
+        
+        <%})%>
+
+    </table>
+
+  
+    <a href="/" class="go-to go-todo">Create new Todo</a>
+</div>

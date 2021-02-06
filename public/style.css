@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&family=Yusei+Magic&display=swap');
+*{
+    margin: 0;
+    padding:0;
+}
+body{
+    background-color: rgb(4, 199, 199);
+    font-family: 'Roboto', sans-serif;
+}
+
+.sign-todoDiv{
+    margin-top: 2em;
+}
+
+.sign-div{
+    padding-top: 1em;
+    padding-bottom: 1em;
+    text-align: center;
+    background: linear-gradient(to right, white, rgb(172, 168, 168));
+    width: 90%;
+    margin: auto;
+    border-radius: 10px;
+    margin-top: 30%;
+    box-shadow: 2px 2px rgb(49, 49, 49);
+}
+
+.email-div{
+    position: relative;
+    right: 3.8em;
+    margin-bottom: .2em;
+    margin-top: 2em;
+}
+
+.password-div{
+    position: relative;
+    right: 2.7em;
+    margin-bottom: .2em;
+}
+
+.sign-input{
+    height: 2em;
+    width: 12em;
+    margin-bottom: 1em;
+}
+.sign-todoDiv{
+    text-align: center;
+    color: azure;
+}
+
+.sign-button{
+    border: none;
+    outline: none;
+    background-color: chartreuse;
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+    margin-bottom: 1em;
+    cursor: pointer;
+}
+
+.sign-button:hover{
+    background-color: white;
+    color: chartreuse;
+}
+
+.todo-index-div{
+    text-align: center;
+    color: white;
+}
+
+.todo-input{
+    width: 20em;
+    height: 2em;
+    margin-bottom: 2em;
+    font-family: 'Roboto', sans-serif;
+}
+
+.todo-textarea{
+    width: 20em;
+    height: 15em;
+    resize: none;
+    font-family: 'Roboto', sans-serif;
+}
+.index-form-div{
+    margin-top: 2%;
+    color: black;
+    box-shadow: 2px 2px rgb(49, 49, 49);
+}
+.due-label-div{
+    position: relative;
+    right: 6.4em;
+    margin-bottom: .3em;
+    padding-top: 1em;
+}
+
+.subject-label-div{
+    position: relative;
+    right: 6.8em;
+    margin-bottom: .3em;
+}
+
+.objective-label-div{
+    margin-bottom: .3em;
+    position: relative;
+    right:6em;
+}
+
+.index-btn{
+    margin-top: 1em;
+    font-size: 1.2em;
+}
+
+.logout-btn{
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-size: .5em;
+    background-color: red;
+    border-radius: 5px;
+    padding:10px;
+    color: white;
+    position: absolute;
+    right: 10%;
+}
+
+.logout-btn:hover{
+    color: red;
+    background-color: white;
+}
+.btn-danger{
+    text-decoration: none;
+    border: none;
+    outline: none;
+    background-color: red;
+    border-radius: 5px;
+    padding:10px;
+    color: white;
+    margin: 1em;
+    cursor: pointer;
+    font-size: .7em;
+}
+
+.btn-danger:hover{
+    color: red;
+    background-color: white;
+}
+
+.go-to{
+    text-align: center;
+    display: block;
+    padding-bottom: 1em;
+}
+
+
+.todo-table{
+    margin: auto;
+    background-color: white;
+    border: 1px solid black;
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+    font-size: .9em;
+    margin-top: 3em;
+}
+.h1-div{
+    text-align: center;
+    color: white;
+    font-size: .7em;
+    margin-top:3em;
+
+}
+
+.index-h1{
+    text-align: left;
+    margin-left: 3em;
+    margin-bottom: 2em;
+}
+.go-todo{
+    margin-top: 2em;
+    color: rgb(0, 4, 255);
+}
+td{
+    border: 1px solid black;
+    padding:5px;
+    max-width: 20em;
+    
+    
+}
+th{
+    border: 1px solid black;
+    padding: 1em;
+}
+.delete-td{
+    text-align: center;
+}
+
+.obj-div{
+    
+    word-break: break-all;
+}
+
+.task-complete{
+    color: rgb(60, 255, 0);
+    text-align: center;
+    margin: 1em;
+    padding-top: 1em;
+}
+
+.sign-message-div{
+    color: red;
+    margin: 1em;
+}
+
+@media(min-width :590px){
+    .sign-div{
+        margin-top: 10%;
+        width: 60%;
+        
+    }
+    .h1-div{
+        text-align: center;
+        color: white;
+        font-size: initial;
+    }
+}
+
+@media(min-width :1085px){
+
+    .index-h1{
+        text-align: initial;
+        margin-left: 0;
+        margin-bottom: 0;
+    }
+    .sign-div{
+        margin-top: 10%;
+        width: 30%;
+        
+    }
+    .todo-table{
+        padding:20px;  
+        width: 90%;
+        font-size: initial;
+       
+    }
+    .h1-div{
+        text-align: center;
+        color: white;
+        font-size: initial;
+    }
+    .btn-danger{
+        font-size: initial;
+    }
+    .index-form-div{
+        margin-top: 2%;
+    }
+}

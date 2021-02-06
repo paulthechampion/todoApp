@@ -1,0 +1,43 @@
+<div class="todo-index-div">
+
+    <div class="h1-div index-h1" ><h1>Create Your Todo List <a href="/logout" class="logout-btn">Logout</a></h1></div>
+
+
+
+    <div class= "sign-div index-form-div">
+        <%if (hasErrors) {%>
+        
+    <%message.forEach(messages=>{%>
+         <div class="task-complete"> <%=messages%></div>
+    <%})}%>  
+            <form method="POST" action="/">
+                <div>
+                    <div class="due-label-div">
+                        <label>Date Due</label>
+                    </div>
+                    <input type="date" name="dateDue" required class="todo-input"/>
+                </div>
+
+                <div>
+                    <div class="subject-label-div">
+                        <label>Subject</label>
+                    </div>
+                    <input type="text" name="subject" required class="todo-input"/>
+                </div>
+
+                <div>
+                    <div class="objective-label-div">
+                        <label>Objectives</label>
+                    </div>
+                    <textarea name="objective" class="todo-textarea"placeholder="Write all the objectives you want to achieve on this subject"></textarea>
+                </div>
+
+
+                <button type="submit" class="sign-button index-btn">Create Todo</button>
+
+            </form>
+
+    <a href="/todo" class="go-to">Go to your saved Todo List</a>
+    </div>
+
+</div>
